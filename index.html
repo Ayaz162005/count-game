@@ -386,7 +386,20 @@
                 <!-- Side Panels (Right/Bottom) -->
                 <div class="space-y-4 mt-4 lg:mt-0">
                     <div id="strategy-panel" class="panel p-4 rounded-xl shadow-lg">
-                        <h3 class="font-semibold mb-2 text-center">Strategy AI</h3>
+                        <h3 class="font-semibold mb-2 text-center flex justify-center items-center gap-1.5">
+                            <span>Strategy AI</span>
+                            <div class="group relative flex items-center">
+                                <div class="flex h-4 w-4 cursor-help items-center justify-center rounded-full" style="background-color: var(--text-secondary);">
+                                    <span class="text-xs font-bold not-italic" style="color: var(--bg-secondary);">!</span>
+                                </div>
+                                <div class="absolute bottom-full right-0 z-20 mb-2 w-64 rounded-lg bg-slate-900 px-3 py-2 text-center text-sm font-normal text-white opacity-0 transition-opacity group-hover:opacity-100 pointer-events-none">
+                                    Key positions are calculated with: <strong class="text-amber-400">N % (K + 1)</strong>.
+                                    <br>
+                                    (N = Target, K = Max Ducks/Turn). Landing an opponent on a number matching this result gives a winning advantage.
+                                    <svg class="absolute right-2 top-full h-2 w-auto text-slate-900" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve"><polygon class="fill-current" points="0,0 127.5,127.5 255,0"/></svg>
+                                </div>
+                            </div>
+                        </h3>
                         <div id="strategy-content" class="text-sm space-y-2" style="color: var(--text-secondary);">
                             <p><strong>Status:</strong> <span id="strategy-status"></span></p>
                             <p id="strategy-explanation"></p>
@@ -1074,4 +1087,3 @@
 </body>
 
 </html>
-
